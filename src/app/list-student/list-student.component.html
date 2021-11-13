@@ -1,0 +1,67 @@
+<div class="main">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="main-card mb-3 card">
+        <div class="card-header">
+          <h2>List Student Management</h2>
+        </div>
+        <h3>Data Table</h3>
+        <div class="table-responsive">
+          <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Fullname</th>
+                <th>Date Of Birth</th>
+                <th>Address</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let student of students">
+                <td>{{ student.id }}</td>
+                <td>{{ student.fullName }}</td>
+                <td>{{ student.birthDay }}</td>
+                <td>{{ student.address }}</td>
+                <td>
+                  <!-- <button (click)="goDetail(student.id)">Details</button> -->
+                  <a routerLink="/detail/{{ student.id }}">Details</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+          <!-- right body  -->
+          <div class="form-student-info">
+            <form (ngSubmit)="submitAddNewStudent()">
+              <div>
+                <h3 class="form-title">Student Info</h3>
+              </div>
+              <div class="form-body">
+                <div class="row-info">
+                  <label for="fullnNme">Fullname:</label><br>
+                  <input class="input-info" type="text" [(ngModel)]="student.fullName" name="fullName"
+                    placeholder="Enter fullname"><br>
+                </div>
+                <div class="row-info">
+                  <label for="birthDay">Date of birth:</label><br>
+                  <input class="input-info" type="date" [(ngModel)]="student.birthDay" name="birthDay"><br><br>
+                </div>
+                <div class="row-info">
+                  <label for="address">Address:</label><br>
+                  <input class="input-info" type="text" [(ngModel)]="student.address" name="address"
+                    placeholder="Enter address"><br>
+                </div>
+              </div>
+              <div class="btn-save">
+                <button type="submit">Save</button>
+              </div>
+            </form>
+          </div>
+          <!-- end body -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

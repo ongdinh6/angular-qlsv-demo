@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  public username : string;
+  @Input() username : string;
   public submit : boolean;
   public fruits = ['Orange', 'Strawberry', 'Logan', 'Apple', 'Rambutan']
 

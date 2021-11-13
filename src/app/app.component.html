@@ -1,11 +1,11 @@
 <main>
   <header>
-    <app-header></app-header>
+    <app-header [username]="usernameSayHi" ></app-header>
   </header>
-  <section>
+  <section class="container">
     <router-outlet></router-outlet>
+    <!-- <app-login-component [loginForm]="loginData"></app-login-component> -->
   </section>
   <footer>
-
   </footer>
 </main>

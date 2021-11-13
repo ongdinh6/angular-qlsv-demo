@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginForm } from '../class/login-form';
 import { HeaderComponent } from '../header/header.component';
@@ -14,14 +14,16 @@ export class LoginComponentComponent implements OnInit {
 
 
   constructor(private httpServerService: HttpServerService, private router: Router) {
+    
   }
 
 
   ngOnInit(): void {
 
   }
+  @Input() loginForm = new LoginForm();
 
-  public loginForm = new LoginForm();
+  // public loginForm = new LoginForm();
 
   //sử dụng dịch vụ ở cửa hàng
   submitLogin(){

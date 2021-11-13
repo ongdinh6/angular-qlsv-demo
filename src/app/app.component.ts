@@ -8,6 +8,8 @@ import { LoginForm } from './class/login-form';
 export class AppComponent {
   title = 'qlsv';
   //tập chung dữ liệu về một chổ
+  loginData: LoginForm = new LoginForm();
+  usernameSayHi: string = 'admin';
 
   constructor(){
     //todo anything here

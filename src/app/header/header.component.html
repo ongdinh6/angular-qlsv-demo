@@ -22,7 +22,8 @@
   <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
   <nav>
     <h3 *ngIf="username !== ''">{{'Hello, '+username}}</h3>
-    <a routerLink="/login-page" routerLinkActive="active" id="loginText">Login</a>
-    <a routerLink="/register-page" routerLinkActive="active" id="registerText">Register</a>
+    <a routerLink="/login-page" routerLinkActive="active">Login</a>
+    <a routerLink="/register-page" routerLinkActive="active">Register</a>
   </nav>
 </div>
+

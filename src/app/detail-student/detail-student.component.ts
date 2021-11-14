@@ -62,12 +62,14 @@ export class DetailStudentComponent implements OnInit {
 
   /* remove from list */
   removeStudentById(id: any): void {
-    this.httpServerService
-      .deleteStudentByIdService(id)
-      .subscribe((response) => {
-        if (response.status === 200) {
-          //do something
-        }
-      });
+    this.httpServerService.deleteStudentByIdService(id).subscribe(
+      (response) => {
+        //do something
+        alert(response.message);
+      },
+      (err) => {
+        alert(err.error.text);
+      }
+    );
   }
 }

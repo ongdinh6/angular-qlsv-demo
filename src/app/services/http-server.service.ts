@@ -65,6 +65,7 @@ export class HttpServerService {
   /* remove from list */
   public deleteStudentByIdService(id: number): Observable<any> {
     const url = `${this.HTTP_SERVER_URL}/api/v1/student/` + id;
-    return this.httpClient.delete(url, this.httpOptions);
+    return this.httpClient.delete(url, {observe: 'response'})
   }
+
 }

@@ -21,9 +21,10 @@
   <h1>WELLCOME TO ANGULAR </h1>
   <!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
   <nav>
-    <h3 *ngIf="username !== ''">{{'Hello, '+username}}</h3>
     <a routerLink="/login-page" routerLinkActive="active">Login</a>
     <a routerLink="/register-page" routerLinkActive="active">Register</a>
   </nav>
+  <hr/>
 </div>
+<router-outlet></router-outlet>
 

@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { HttpServerService } from '../services/http-server.service';
 
 @Component({
   selector: 'app-header',
@@ -6,21 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Input() username : string;
-  public submit : boolean;
-  public fruits = ['Orange', 'Strawberry', 'Logan', 'Apple', 'Rambutan']
 
   constructor() {
-    this.username = '';
-    this.submit = false;
-  }
-
-  setUsername(value: string): void {
-    this.username = value;
-    this.submit = true;
   }
 
   ngOnInit(): void {
+
   }
 
 }

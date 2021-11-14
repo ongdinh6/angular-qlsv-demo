@@ -20,7 +20,12 @@ import { RegisterComponentComponent } from './register-component/register-compon
     RegisterComponentComponent,
     DetailStudentComponent,
   ],
-  imports: [BrowserModule, FormsModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    AppRoutingModule
+  ],
   exports:[RouterModule],
   //this is contain all components of my application
   providers: [],

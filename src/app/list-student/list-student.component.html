@@ -11,14 +11,14 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Fullname</th>
+                <th>Full Name</th>
                 <th>Date Of Birth</th>
                 <th>Address</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let student of students">
+              <tr *ngFor="let student of students" ng-model-options="{debounce: 5000}">
                 <td>{{ student.id }}</td>
                 <td>{{ student.fullName }}</td>
                 <td>{{ student.birthDay }}</td>

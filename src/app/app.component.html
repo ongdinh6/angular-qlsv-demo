@@ -1,10 +1,10 @@
 <main>
   <header>
-    <app-header [username]="usernameSayHi" ></app-header>
+    <!-- chứa component con -->
+    <app-header (loginHandler)="onLoginHandler($event)"></app-header>
   </header>
   <section class="container">
     <router-outlet></router-outlet>
-    <!-- <app-login-component [loginForm]="loginData"></app-login-component> -->
   </section>
   <footer>
   </footer>

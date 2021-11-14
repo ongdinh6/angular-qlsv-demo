@@ -36,25 +36,31 @@
             <form (ngSubmit)="submitAddNewStudent()">
               <div>
                 <h3 class="form-title">Student Info</h3>
+
               </div>
               <div class="form-body">
-                <div class="row-info">
-                  <label for="fullnNme">Fullname:</label><br>
-                  <input class="input-info" type="text" [(ngModel)]="student.fullName" name="fullName"
-                    placeholder="Enter fullname"><br>
+                <div class="row-info col-md-12">
+                  <label class="col-md-4" for="fullName">Fullname:</label><br>
+                  <input class="input-info form-control col-md-8" type="text" [(ngModel)]="student.fullName"
+                    name="fullName" placeholder="Enter full name">
+                  <br>
                 </div>
-                <div class="row-info">
-                  <label for="birthDay">Date of birth:</label><br>
-                  <input class="input-info" type="date" [(ngModel)]="student.birthDay" name="birthDay"><br><br>
+                <p class="errors">{{errorFullName}}</p>
+                <div class="row-info col-md-12">
+                  <label class="col-md-6" for="birthDay">Birth Date:</label><br>
+                  <input class="input-info form-control col-md-8" type="date" [(ngModel)]="student.birthDay"
+                    name="birthDay" [placeholder]="errorDate===''?'Enter date of birth':errorDate">
+                  <br><br>
                 </div>
-                <div class="row-info">
-                  <label for="address">Address:</label><br>
-                  <input class="input-info" type="text" [(ngModel)]="student.address" name="address"
-                    placeholder="Enter address"><br>
+                <p class="errors">{{errorDate}}</p>
+                <div class="row-info col-md-12">
+                  <label class="col-md-4" for="address">Address:</label><br>
+                  <input class="input-info form-control col-md-8" type="text" [(ngModel)]="student.address"
+                    name="address" placeholder="Enter address"><br>
                 </div>
               </div>
               <div class="btn-save">
-                <button type="submit">Save</button>
+                <button type="submit" class="btn btn-success btnSave">Save</button>
               </div>
             </form>
           </div>

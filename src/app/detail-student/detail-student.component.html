@@ -23,8 +23,8 @@
           </div>
         </div>
         <div class="btn-footer">
-          <button type="submit">Edit</button>
-          <button type="button" [routerLink]="['/list-student']" routerLinkActive="router-link-active" (click)="removeStudentById(student.id)">Remove From List</button>
+          <button type="submit" class="btn btn-success btnFooter">Edit</button>
+          <button type="button" class="btn btn-danger btnFooter" [routerLink]="['/list-student']" routerLinkActive="router-link-active" (click)="removeStudentById(student.id)">Remove From List</button>
         </div>
       </form>
     </div>
